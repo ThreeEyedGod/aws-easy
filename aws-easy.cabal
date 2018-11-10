@@ -25,6 +25,7 @@ library
                                           , base >= 4.7 && < 5
                                           , bytestring
                                           , lens
+                                          , monad-control
                                           , resourcet
                                           , template-haskell
   exposed-modules:                          Network.AWS.Easy

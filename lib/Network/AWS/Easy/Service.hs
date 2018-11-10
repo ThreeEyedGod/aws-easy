@@ -11,6 +11,7 @@ This module provides support for configuring and making client connections to AW
 -}
 
 {-# LANGUAGE AllowAmbiguousTypes #-}
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards #-}
@@ -40,10 +41,6 @@ import           Control.Monad.Trans.AWS
                     , runAWST
                     , within
                     )
-import           Control.Monad.Trans.Resource
-                    ( MonadBaseControl
-                    , ResourceT
-                    )
 import           Data.ByteString (ByteString)
 import           Network.AWS
                     ( Credentials(..)
@@ -60,6 +57,19 @@ import           Network.AWS
 import           Network.AWS.Easy.Classes
 import           Network.AWS.Easy.Types
 import           System.IO (stdout)
+
+#if __GLASGOW_HASKELL__ >= 802
+import           Control.Monad.Trans.Control (MonadBaseControl)
+import           Control.Monad.Trans.Resource
+                    ( MonadUnliftIO
+                    , ResourceT
+                    )
+#else
+import           Control.Monad.Trans.Resource
+                    ( MonadBaseControl
+                    , ResourceT
+                    )
+#endif
 
 type HostName = ByteString
 
@@ -102,7 +112,11 @@ regionService (AWSRegion region) s = (region, s)
 -- Run against a local DynamoDB instance on a given host and port
 regionService (Local hostName port) s = (NorthVirginia, setEndpoint False hostName port s)
 
+#if __GLASGOW_HASKELL__ >= 802
+withAWS :: (MonadBaseControl IO m, MonadUnliftIO m, SessionClass b) =>
+#else
 withAWS :: (MonadBaseControl IO m, SessionClass b) =>
+#endif
     AWST' Env (ResourceT m) a
     -> b
     -> m a
