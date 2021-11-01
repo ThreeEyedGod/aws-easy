@@ -27,6 +27,13 @@ stack setup
 stack build --fast
 ```
 
+### Dump out Template Haskell splices
+
+```
+stack clean && stack build --ghc-options='-ddump-splices -ddump-to-file'
+find . -name '*.dump-splices'
+```
+
 ### Test
 
 ```
