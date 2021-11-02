@@ -40,6 +40,14 @@ find . -name '*.dump-splices'
 stack test
 ```
 
+### Publish new version
+
+* Bump version number in [`aws-easy.cabal`](aws-easy.cabal)
+* Commit change
+* Create a Git tag, e.g. `git tag -a v0.1.0.3 -m v0.1.0.3`
+* Push to GitHub, e.g. `git push && git push --tags`
+* Publish using `stack upload .`
+
 ## Licence
 
 Released under [MIT License][licence]

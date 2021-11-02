@@ -1,5 +1,5 @@
 name:                                       aws-easy
-version:                                    0.1.0.2
+version:                                    0.1.0.3
 synopsis:                                   Helper function and types for working with amazonka
 description:                                This package provides assorted functions and some Template Haskell to simplify working the @amazonka@ family of packages for interacting with Amazon Web Services.
 homepage:                                   https://github.com/rcook/aws-easy#readme
@@ -7,7 +7,7 @@ license:                                    MIT
 license-file:                               LICENSE
 author:                                     Richard Cook
 maintainer:                                 rcook@rcook.org
-copyright:                                  2018 Richard Cook
+copyright:                                  (C) 2017-2021 Richard Cook
 category:                                   Network
 build-type:                                 Simple
 cabal-version:                              >= 1.10
