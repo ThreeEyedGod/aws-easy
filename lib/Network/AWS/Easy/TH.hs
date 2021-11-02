@@ -10,6 +10,7 @@ Portability : portable
 This module provides Template Haskell helper functions for generating type-safe service/session wrappers for @amazonka@.
 -}
 
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE TemplateHaskell #-}
 
 module Network.AWS.Easy.TH
@@ -77,7 +78,7 @@ wrapAWSService varN serviceTypeName sessionTypeName = do
                         Nothing
                         []
                         (AppT (ConT ''ServiceClass) (ConT serviceN))
-                        [ TySynInstD ''TypedSession (TySynEqn [ConT serviceN] (ConT sessionN))
+                        [ mkTySynInstD serviceN sessionN
                         , FunD 'rawService [Clause [ConP serviceN [VarP serviceVarN]] (NormalB (VarE serviceVarN)) []]
                         , ValD (VarP 'wrappedSession) (NormalB (ConE $ mkName sessionTypeName)) []
                         ]
@@ -97,3 +98,10 @@ wrapAWSService varN serviceTypeName sessionTypeName = do
         , sig
         , var
         ]
+
+mkTySynInstD :: Name -> Name -> Dec
+#if __GLASGOW_HASKELL__ >= 810
+mkTySynInstD serviceN sessionN = TySynInstD (TySynEqn Nothing (AppT (ConT ''TypedSession) (ConT serviceN)) (ConT sessionN))
+#else
+mkTySynInstD serviceN sessionN = TySynInstD ''TypedSession (TySynEqn [ConT serviceN] (ConT sessionN))
+#endif
