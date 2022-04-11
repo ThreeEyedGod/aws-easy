@@ -9,10 +9,10 @@ Portability : portable
 -}
 
 module Network.AWS.Easy
-    ( module Network.AWS.Easy.Classes
-    , module Network.AWS.Easy.Service
-    , module Network.AWS.Easy.TH
-    , module Network.AWS.Easy.Types
+    ( module Amazonka.Easy.Classes
+    , module Amazonka.Easy.Service
+    , module Amazonka.Easy.TH
+    , module Amazonka.Easy.Types
     ) where
 
 import           Amazonka.Easy.Classes
