@@ -20,7 +20,7 @@ module Network.AWS.Easy.Types
     ) where
 
 import           Control.Lens (makeLenses)
-import           Network.AWS (Env, Region, Service)
+import           Amazonka (Env, Region, Service)
 
 data Session = Session
     { _sEnv :: Env
