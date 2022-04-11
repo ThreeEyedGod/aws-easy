@@ -1,4 +1,3 @@
-# stack-lts-18.14.yaml
 resolver: lts-19.3
 extra-deps:
 - amazonka
