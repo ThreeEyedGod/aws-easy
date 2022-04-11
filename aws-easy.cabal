@@ -28,11 +28,11 @@ library
                                           , monad-control
                                           , resourcet
                                           , template-haskell
-  exposed-modules:                          Network.AWS.Easy
-                                          , Network.AWS.Easy.Classes
-                                          , Network.AWS.Easy.Service
-                                          , Network.AWS.Easy.TH
-                                          , Network.AWS.Easy.Types
+  exposed-modules:                          Amazonka.Easy
+                                          , Amazonka.Easy.Classes
+                                          , Amazonka.Easy.Service
+                                          , Amazonka.Easy.TH
+                                          , Amazonka.Easy.Types
 
 executable aws-easy-demo
   default-language:                         Haskell2010
