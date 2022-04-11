@@ -28,7 +28,7 @@ library
                                           , monad-control
                                           , resourcet
                                           , template-haskell
-  exposed-modules:                          Amazonka.Easy
+  exposed-modules:                        , Amazonka.Easy
                                           , Amazonka.Easy.Classes
                                           , Amazonka.Easy.Service
                                           , Amazonka.Easy.TH
