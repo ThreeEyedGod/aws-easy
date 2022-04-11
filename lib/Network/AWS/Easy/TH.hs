@@ -18,9 +18,9 @@ module Network.AWS.Easy.TH
     ) where
 
 import           Language.Haskell.TH
-import           Network.AWS (Service)
-import           Network.AWS.Easy.Classes
-import           Network.AWS.Easy.Types
+import           Amazonka (Service)
+import           Amazonka.Easy.Classes
+import           Amazonka.Easy.Types
 
 -- |Generates type-safe AWS service and session wrapper types for use with
 -- 'AWSViaHaskell.AWSService.connect' and 'AWSViaHaskell.AWSService.withAWS' functions
