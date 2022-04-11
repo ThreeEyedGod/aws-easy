@@ -1,4 +1,0 @@
-resolver: lts-18.14
-extra-deps:
-- amazonka-1.6.1
-- unliftio-core-0.1.2.0
