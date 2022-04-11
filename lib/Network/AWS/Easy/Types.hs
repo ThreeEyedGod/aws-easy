@@ -12,7 +12,7 @@ This module provides support types for @aws-easy@.
 
 {-# LANGUAGE TemplateHaskell #-}
 
-module Network.AWS.Easy.Types
+module Amazonka.Easy.Types
     ( Session(..)
     , sEnv
     , sRegion
