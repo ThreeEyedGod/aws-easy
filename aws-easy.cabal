@@ -22,7 +22,7 @@ library
   hs-source-dirs:                           lib
   ghc-options:                              -W -Wall -fwarn-incomplete-patterns -fwarn-unused-imports
   build-depends:                            amazonka
-                                          , base >= 4.7 && < 5
+                                          , base >= 4.12 && < 5
                                           , bytestring
                                           , lens
                                           , monad-control
@@ -43,7 +43,7 @@ executable aws-easy-demo
                                           , amazonka-dynamodb
                                           , amazonka-s3
                                           , aws-easy
-                                          , base >= 4.7 && < 5
+                                          , base >= 4.12 && < 5
                                           , lens
                                           , split
                                           , text
