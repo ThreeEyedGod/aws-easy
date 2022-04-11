@@ -20,7 +20,7 @@ This module provides support for configuring and making client connections to AW
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module Network.AWS.Easy.Service
+module Amazonka.Easy.Service
     ( AWSConfig
     , Endpoint(..)
     , HostName
