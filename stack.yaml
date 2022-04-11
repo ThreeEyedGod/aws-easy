@@ -1,4 +1,4 @@
 resolver: lts-19.3
 
 extra-deps:
-  - unliftio-core-0.1.2.0
+  # - unliftio-core-0.1.2.0
