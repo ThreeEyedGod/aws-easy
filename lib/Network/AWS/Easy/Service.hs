@@ -42,7 +42,7 @@ import           Control.Monad.Trans.AWS
                     , within
                     )
 import           Data.ByteString (ByteString)
-import           Network.AWS
+import           Amazonka
                     ( Credentials(..)
                     , Env
                     , LogLevel(..)
@@ -54,8 +54,8 @@ import           Network.AWS
                     , runResourceT
                     , setEndpoint
                     )
-import           Network.AWS.Easy.Classes
-import           Network.AWS.Easy.Types
+import           Amazonka.Easy.Classes
+import           Amazonka.Easy.Types
 import           System.IO (stdout)
 
 #if __GLASGOW_HASKELL__ >= 802
