@@ -1,5 +1,4 @@
 resolver: lts-19.3
 
 extra-deps:
-  - amazonka
   - unliftio-core-0.1.2.0
