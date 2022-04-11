@@ -18,8 +18,8 @@ module Network.AWS.Easy.Classes
     , SessionClass(..)
     ) where
 
-import           Network.AWS (Service)
-import           Network.AWS.Easy.Types
+import           Amazonka (Service)
+import           Amazonka.Easy.Types
 
 class ServiceClass a where
     type TypedSession a :: *
