@@ -13,7 +13,7 @@ This module provides Template Haskell helper functions for generating type-safe 
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE TemplateHaskell #-}
 
-module Network.AWS.Easy.TH
+module Amazonka.Easy.TH
     ( wrapAWSService
     ) where
 
