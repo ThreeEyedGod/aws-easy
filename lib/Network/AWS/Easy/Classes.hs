@@ -13,7 +13,7 @@ This module provides service and session type classes to support @aws-easy@'s Te
 {-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module Network.AWS.Easy.Classes
+module Amazonka.Easy.Classes
     ( ServiceClass(..)
     , SessionClass(..)
     ) where
