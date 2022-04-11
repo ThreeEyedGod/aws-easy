@@ -24,9 +24,9 @@ import qualified Data.List.NonEmpty as NonEmpty (fromList)
 import           Data.List.Split (chunksOf)
 import           Data.Text (Text)
 import qualified Data.Text as Text (pack)
-import           Network.AWS (Credentials(..), send)
-import           Network.AWS.Data (toText)
-import           Network.AWS.DynamoDB
+import           Amazonka (Credentials(..), send)
+import           Amazonka.Data (toText)
+import           Amazonka.DynamoDB
                     ( attributeValue
                     , avS
                     , batchWriteItem
@@ -37,7 +37,7 @@ import           Network.AWS.DynamoDB
                     , wrPutRequest
                     , writeRequest
                     )
-import           Network.AWS.Easy
+import           Amazonka.Easy
                     ( AWSConfig
                     , Endpoint(..)
                     , awsConfig
@@ -46,14 +46,14 @@ import           Network.AWS.Easy
                     , withAWS
                     , wrapAWSService
                     )
-import           Network.AWS.S3
+import           Amazonka.S3
                     ( BucketName
                     , bName
                     , lbrsBuckets
                     , listBuckets
                     , s3
                     )
-import           Network.AWS.Data (fromText)
+import           Amazonka.Data (fromText)
 import           System.Environment (getEnv)
 
 newtype TableName = TableName Text deriving Show
