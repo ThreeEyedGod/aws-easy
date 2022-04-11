@@ -15,7 +15,7 @@ module Network.AWS.Easy
     , module Network.AWS.Easy.Types
     ) where
 
-import           Network.AWS.Easy.Classes
-import           Network.AWS.Easy.Service
-import           Network.AWS.Easy.TH
-import           Network.AWS.Easy.Types
+import           Amazonka.Easy.Classes
+import           Amazonka.Easy.Service
+import           Amazonka.Easy.TH
+import           Amazonka.Easy.Types
