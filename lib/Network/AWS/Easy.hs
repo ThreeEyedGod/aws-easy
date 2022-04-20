@@ -8,7 +8,7 @@ Stability   : experimental
 Portability : portable
 -}
 
-module Network.AWS.Easy
+module Amazonka.Easy
     ( module Amazonka.Easy.Classes
     , module Amazonka.Easy.Service
     , module Amazonka.Easy.TH
