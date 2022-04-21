@@ -28,6 +28,7 @@ library
                                           , monad-control
                                           , resourcet
                                           , template-haskell
+                                          , transformers >= 0.5.6.2
   exposed-modules:                          Amazonka.Easy
                                           , Amazonka.Easy.Classes
                                           , Amazonka.Easy.Service
